@@ -1,0 +1,225 @@
+/* Upgrade Modal Overlay */
+.upgrade-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Container */
+.upgrade-modal-container {
+  background: #1E242E;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+  box-shadow: 
+    0 0 40px rgba(0, 255, 127, 0.1),
+    0 0 80px rgba(0, 255, 127, 0.05);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Animation Container */
+.modal-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  height: 200px;
+}
+
+/* Green Theme for Mining Animation */
+.mining-scene.green-theme .ring-system-3d.green-mining .ring {
+  border-color: transparent;
+  background-image: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Green Orbit Rings */
+.mining-scene.green-theme .ring-orbit-1 {
+  width: 165px;
+  height: 165px;
+  border: 2px solid rgba(0, 255, 127, 0.7) !important;
+  animation: rotateOrbit1 20s linear infinite;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 127, 0.6),
+    inset 0 0 10px rgba(0, 255, 127, 0.3);
+}
+
+.mining-scene.green-theme .ring-orbit-2 {
+  width: 145px;
+  height: 145px;
+  border: 2px solid rgba(0, 255, 127, 0.65) !important;
+  animation: rotateOrbit2 15s linear infinite reverse;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 127, 0.5),
+    inset 0 0 10px rgba(0, 255, 127, 0.25);
+}
+
+.mining-scene.green-theme .ring-orbit-3 {
+  width: 125px;
+  height: 125px;
+  border: 2px solid rgba(0, 255, 127, 0.6) !important;
+  animation: rotateOrbit3 12s linear infinite;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 127, 0.4),
+    inset 0 0 10px rgba(0, 255, 127, 0.2);
+}
+
+.mining-scene.green-theme .ring-orbit-4 {
+  width: 105px;
+  height: 105px;
+  border: 2px solid rgba(0, 255, 127, 0.55) !important;
+  animation: rotateOrbit4 10s linear infinite reverse;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 127, 0.3),
+    inset 0 0 10px rgba(0, 255, 127, 0.15);
+}
+
+.mining-scene.green-theme .ring-orbit-5 {
+  width: 85px;
+  height: 85px;
+  border: 2px solid rgba(0, 255, 127, 0.5) !important;
+  animation: rotateOrbit5 8s linear infinite;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 127, 0.2),
+    inset 0 0 10px rgba(0, 255, 127, 0.1);
+}
+
+/* Fee Section */
+.modal-fee-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(0, 255, 127, 0.05);
+  border: 1px solid rgba(0, 255, 127, 0.2);
+  border-radius: 12px;
+}
+
+.fee-label {
+  font-size: 0.9rem;
+  color: #8FA4B8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+.fee-amount {
+  font-size: 2rem;
+  color: #00FF7F;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(0, 255, 127, 0.5);
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-confirm-btn,
+.modal-cancel-btn {
+  flex: 1;
+  padding: 0.875rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-confirm-btn {
+  background: linear-gradient(135deg, #00FF7F, #00CC66);
+  color: #0E1116;
+  box-shadow: 
+    0 4px 15px rgba(0, 255, 127, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.modal-confirm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 25px rgba(0, 255, 127, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.modal-cancel-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #8FA4B8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #F4F7FA;
+}
+
+/* Button Press Effect */
+.modal-confirm-btn:active,
+.modal-cancel-btn:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .upgrade-modal-container {
+    width: 95%;
+    padding: 2rem 1.5rem;
+  }
+
+  .modal-animation-container {
+    height: 180px;
+  }
+
+  .fee-amount {
+    font-size: 1.75rem;
+  }
+}
